@@ -1,0 +1,498 @@
+\documentclass[aip,jcp,reprint,showkeys]{revtex4-1}
+\usepackage{graphicx,dcolumn,bm,xcolor,microtype,hyperref,multirow,amscd,amsmath,amssymb,amsfonts,physics}
+
+\newcommand{\alert}[1]{\textcolor{red}{#1}}
+\newcommand{\cdash}{\multicolumn{1}{c}{---}}
+\newcommand{\mc}{\multicolumn}
+\newcommand{\mcc}[1]{\multicolumn{1}{c}{#1}}
+\newcommand{\mr}{\multirow}
+
+% dressing symbol
+\newcommand{\DrSym}[1]{\Tilde{#1}}
+
+
+% wave functions and orbitals
+\newcommand{\PsiT}{\Psi_\text{T}}
+\newcommand{\ExactPsi}{\Phi}
+\newcommand{\Js}{J}
+\newcommand{\sdet}{D}
+\newcommand{\MO}[1]{\phi_{#1}}
+\newcommand{\GTO}[1]{\chi_{#1}}
+
+% coefficients
+\newcommand{\cCI}[1]{c_{#1}}
+\newcommand{\cGTO}[2]{c_{#1 #2}}
+
+% hat operators 
+\newcommand{\hH}{\Hat{H}}
+\newcommand{\hI}{\Hat{I}}
+\newcommand{\hP}{\Hat{P}}
+\newcommand{\hF}{\Hat{F}}
+
+% matrices
+\newcommand{\bF}{\bm{F}}
+\newcommand{\bH}{\bm{H}}
+\newcommand{\bP}{\bm{P}}
+\newcommand{\eigval}{\bm{\varepsilon}}
+
+
+% matrix elements
+\newcommand{\HEl}[2]{H_{#1 #2}}
+\newcommand{\FEl}[2]{F_{#1 #2}}
+\newcommand{\MOeigval}[1]{\varepsilon_{#1}}
+
+% bold symbols
+\newcommand{\br}{\bm{r}}
+\newcommand{\bR}{\bm{R}}
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bO}{\mathbf{0}}
+\newcommand{\ba}{\bm{a}}
+\newcommand{\occ}{\text{occ}}
+\newcommand{\virt}{\text{virt}}
+
+% energies
+\newcommand{\EHF}{E_\text{HF}}
+\newcommand{\Ec}{E_\text{c}}
+\newcommand{\EFCI}{E_\text{FCI}}
+\newcommand{\EDMC}{E_\text{DMC}}
+
+% methods
+\newcommand{\SCSC}{(SC)$^2$}
+
+\begin{document}	
+
+\title{Electronic excitations in cyanines with state-of-the-art multireference methods}	
+
+\author{Yann Garniron}
+\affiliation{Laboratoire de Chimie et Physique Quantiques, Universit\'e de Toulouse, CNRS, UPS, France}
+\author{Emmanuel Giner}
+\affiliation{Max Planck Institue for Solid State Research, Heisenbergstra{\ss}e 1, 70569, Germany}
+\author{Michel Caffarel}
+\affiliation{Laboratoire de Chimie et Physique Quantiques, Universit\'e de Toulouse, CNRS, UPS, France}
+\author{Jean-Paul Malrieu}
+\affiliation{Laboratoire de Chimie et Physique Quantiques, Universit\'e de Toulouse, CNRS, UPS, France}
+\author{Anthony Scemama}
+\email[Corresponding author: ]{scemama@irsamc.ups-tlse.fr}
+\affiliation{Laboratoire de Chimie et Physique Quantiques, Universit\'e de Toulouse, CNRS, UPS, France}
+\author{Pierre-Fran{\c c}ois Loos}
+\email[Corresponding author: ]{loos@irsamc.ups-tlse.fr}
+\affiliation{Laboratoire de Chimie et Physique Quantiques, Universit\'e de Toulouse, CNRS, UPS, France}
+
+\begin{abstract}
+This is the abstract
+\end{abstract}
+
+\keywords{cyanine; excited states; multireference methods}
+
+\maketitle
+
+%----------------------------------------------------------------
+\section{Introduction}
+%----------------------------------------------------------------
+Unless otherwise stated, atomic units are used throughout.
+
+%----------------------------------------------------------------
+\section{Computational details}
+%----------------------------------------------------------------
+
+%----------------------------------------------------------------
+\section{Conclusion}
+%----------------------------------------------------------------
+
+
+%----------------------------------------------------------------
+\begin{acknowledgments}
+This work was performed using HPC resources from CALMIP (Toulouse) under allocation 2016-0510 and from GENCI-TGCC (Grant 2016-08s015).
+\end{acknowledgments}
+%----------------------------------------------------------------
+
+\bibliography{cyanine}
+
+%%% TABLE 1 %%%
+\begin{table*}
+	\caption{
+	\label{tab:GS-energy}
+	Ground-state energy of cyanines for various methods and basis sets.}
+	\begin{ruledtabular}
+	\begin{tabular}{llccccc}
+		Method		&	Basis		&	\mc{5}{c}{Ground-state energy of cyanines}				\\
+										\cline{3-7}
+					&				&	C3		&	C5		&	C7		&	C9		&	C11		\\
+					\hline
+		HF			&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		CISD		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		CAS			&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		\SCSC-CI	&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		DD-CI		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		MR-CISD		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		DD-CC		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		MR-CCSD		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		MR-CCSD(T)	&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		FCI/CIPSI	&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+	\end{tabular}		
+	\end{ruledtabular}		
+\end{table*}		
+%%%  %%%
+
+%%% TABLE 2 %%%
+\begin{table*}
+	\caption{
+	\label{tab:ES-energy}
+	Excited-state energy of cyanines for various methods and basis sets.}
+	\begin{ruledtabular}
+	\begin{tabular}{llccccc}
+		Method		&	Basis		&	\mc{5}{c}{Excited-state energy of cyanines}				\\
+										\cline{3-7}
+					&				&	C3		&	C5		&	C7		&	C9		&	C11		\\
+					\hline
+		HF			&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		CISD		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		CAS			&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		\SCSC-CI	&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		DD-CI		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		MR-CISD		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		DD-CC		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		MR-CCSD		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		MR-CCSD(T)	&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		FCI/CIPSI	&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+	\end{tabular}		
+	\end{ruledtabular}		
+\end{table*}		
+%%%  %%%
+
+%%% TABLE 3 %%%
+\begin{table*}
+	\caption{
+	\label{tab:VE}
+	Vertical excitation energy of cyanines (in eV) for various methods and basis sets.}
+	\begin{ruledtabular}
+	\begin{tabular}{llccccc}
+		Method		&	Basis		&	\mc{5}{c}{Vertical excitation energy of cyanines (in eV)}	\\
+										\cline{3-7}
+					&				&	C3		&	C5		&	C7		&	C9		&	C11		\\
+					\hline
+		HF			&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		CISD		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		CAS			&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		\SCSC-CI	&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		DD-CI		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		MR-CISD		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		DD-CC		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		MR-CCSD		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		MR-CCSD(T)	&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		FCI/CIPSI	&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+	\end{tabular}		
+	\end{ruledtabular}		
+\end{table*}		
+%%%  %%%
+
+%%% TABLE 4 %%%
+\begin{table*}
+	\caption{
+	\label{tab:DMC-GS-energy}
+	Ground-state DMC energy of cyanines for various trial wave functions.	
+	The statistical error is reported in parenthesis.}
+	\begin{ruledtabular}
+	\begin{tabular}{llccccc}
+		Trial wave 	&	Basis		&	\mc{5}{c}{Ground-state DMC energy of cyanines}				\\
+										\cline{3-7}
+		function	&				&	C3		&	C5		&	C7		&	C9		&	C11		\\
+					\hline
+		HF			&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		CISD		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		CAS			&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		\SCSC-CI	&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		DD-CI		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		MR-CISD		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		DD-CC		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		MR-CCSD		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		MR-CCSD(T)	&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		FCI/CIPSI	&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+	\end{tabular}		
+	\end{ruledtabular}		
+\end{table*}		
+%%%  %%%
+
+%%% TABLE 5 %%%
+\begin{table*}
+	\caption{
+	\label{tab:DMC-ES-energy}
+	Excited-state DMC energy of cyanines for various trial wave functions.
+	The statistical error is reported in parenthesis.}
+	\begin{ruledtabular}
+	\begin{tabular}{llccccc}
+		Trial wave	&	Basis		&	\mc{5}{c}{Excited-state DMC energy of cyanines}				\\
+										\cline{3-7}
+		function	&				&	C3		&	C5		&	C7		&	C9		&	C11		\\
+					\hline
+		HF			&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		CISD		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		CAS			&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		\SCSC-CI	&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		DD-CI		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		MR-CISD		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		DD-CC		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		MR-CCSD		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		MR-CCSD(T)	&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		FCI/CIPSI	&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+	\end{tabular}		
+	\end{ruledtabular}		
+\end{table*}		
+%%%  %%%
+
+%%% TABLE 6 %%%
+\begin{table*}
+	\caption{
+	\label{tab:VE}
+	Vertical excitation DMC energy of cyanines (in eV) for various trial wave functions.
+	The statistical error is reported in parenthesis.}
+	\begin{ruledtabular}
+	\begin{tabular}{llccccc}
+		Trial wave	&	Basis		&	\mc{5}{c}{Vertical excitation DMC energy of cyanines (in eV)}	\\
+										\cline{3-7}
+		function	&				&	C3		&	C5		&	C7		&	C9		&	C11		\\
+					\hline
+		HF			&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		CISD		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		CAS			&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		\SCSC-CI	&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		DD-CI		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		MR-CISD		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		DD-CC		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		MR-CCSD		&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		MR-CCSD(T)	&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+					\hline
+		FCI/CIPSI	&	AVDZ		&			&			&			&			&			\\
+					&	AVTZ		&			&			&			&			&			\\
+					&	AVQZ		&			&			&			&			&			\\
+	\end{tabular}		
+	\end{ruledtabular}		
+\end{table*}		
+%%%  %%%
+
+%%% TABLE 7 %%%
+\begin{table*}
+	\caption{
+	\label{tab:comparison-VE}
+	Comparison of vertical excitation energy of cyanines (in eV) for various methods.}
+	\begin{ruledtabular}
+	\begin{tabular}{lllllllc}
+		Method		&	\mc{5}{c}{Vertical excitation energy of cyanines (in eV)}				\\
+						\cline{2-6}
+						&	C3		&	C5		&	C7		&	C9		&	C11						\\
+		\hline
+						&	\mc{5}{c}{Wave function methods}							\\
+		CISD			&			&			&			&			&			&	This work	\\
+		CAS				&			&			&			&			&			&	This work	\\
+		\SCSC-CI		&			&			&			&			&			&	This work	\\
+		DD-CI			&			&			&			&			&			&	This work	\\
+		MR-CISD			&			&			&			&			&			&	This work	\\
+		DD-CC			&			&			&			&			&			&	This work	\\
+		MR-CCSD			&			&			&			&			&			&	This work	\\
+		MR-CCSD(T)		&			&			&			&			&			&	This work	\\
+		FCI/CIPSI		&			&			&			&			&			&	This work	\\
+		\hline
+						&	\mc{5}{c}{DMC calculations}								\\
+		CISD			&			&			&			&			&			&	This work	\\
+		CAS				&			&			&			&			&			&	This work	\\
+		\SCSC-CI		&			&			&			&			&			&	This work	\\
+		DD-CI			&			&			&			&			&			&	This work	\\
+		MR-CISD			&			&			&			&			&			&	This work	\\
+		DD-CC			&			&			&			&			&			&	This work	\\
+		MR-CCSD			&			&			&			&			&			&	This work	\\
+		MR-CCSD(T)		&			&			&			&			&			&	This work	\\
+		FCI/CIPSI		&			&			&			&			&			&	This work	\\
+		\hline
+						&	\mc{5}{c}{Reference calculations}									\\
+		exCC3			&	7.16		&	4.84	&	3.65	&	2.96	&	2.53	&	Ref.~\onlinecite{Send11}	\\
+		DMC				&	7.38(2)		&	5.03(2)	&	3.83(2)	&	3.09(2)	&	2.62(2)	&	Ref.~\onlinecite{Send11}	\\
+		CASPT2			&	7.19		&	4.69	&	3.53	&	2.81	&	2.46	&	Ref.~\onlinecite{Send11}	\\
+		GW/BSE			&				&	4.80	&	3.63	&	2.96	&	2.48	&	Ref.~\onlinecite{Boulanger14}	\\
+		\hline
+						&	\mc{5}{c}{TD-DFT calculations}													\\
+		TD-PBE			&	7.40		&	5.22		&	4.11		&	3.44		&	2.98		&	Ref.~\onlinecite{Send11}	\\
+		TD-PBE0			&	7.62		&	5.33		&	4.18		&	3.50		&	3.03		&	Ref.~\onlinecite{Send11}	\\
+		TD-B2PLYP		&	7.30		&	5.05		&	3.92		&	3.25		&	2.80		&	Ref.~\onlinecite{Send11}	\\
+		TD-CAM-B3LYP	&	7.55		&	5.26		&	4.12		&	3.44		&	2.97		&	Ref.~\onlinecite{Send11}	\\
+		TD-MO6-2X		&				&	5.23		&	4.09		&	3.41		&	2.95		&	Ref.~\onlinecite{Jacquemin12}	\\
+	\end{tabular}		
+	\end{ruledtabular}		
+\end{table*}		
+%%%  %%%
+
+
+\end{document}
