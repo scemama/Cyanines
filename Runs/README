@@ -2,4 +2,5 @@ Basis sets
 ==========
 
 AVDZ: aug-cc-pVDZ
+AVDZ_Pseudo: BFD-VDZ + diffusion functions of aug-cc-pVDZ
 
